@@ -1,0 +1,94 @@
+* {
+    margin: 0;
+}
+
+body {
+    width: 100vw;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: 250px 1fr;
+    background-color: rgb(233, 233, 233);
+}
+
+.sidebar {
+    position: fixed;
+    grid-column: 1 / 2;
+    grid-row: 1 / 2;
+    background-color: rgb(85, 193, 255);
+    height: 100vh;
+    width: 250px;
+    align-self: start;
+}
+
+.main {
+    grid-column: 2 / 3;
+    font: black;
+}
+
+.top-bar {
+    background-color: white;
+    height: 100px;
+}
+
+.content {
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+}
+
+.cards {
+    grid-column: 1 / 2;
+    display: grid;
+    gap: 15px;
+    row-gap: 20px;
+    padding: 15px;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 10px;
+    grid-auto-rows: 200px;
+    grid-auto-flow: row;
+}
+
+.cards > h2 {
+    font-size: 20px;
+}
+
+.notes {
+    grid-column: 1 / 3;
+}
+
+.card {
+    border-left: solid 5px rgb(253, 169, 1);
+    border-radius: 10px;
+    background-color: white;
+    padding: 25px;
+}
+
+.recommended {
+    height: calc(96vh - 100px);
+    display: grid;
+    position: sticky;
+    gap: 15px;
+    row-gap: 20px;
+    padding: 15px;
+    padding-right: 30px;
+    grid-template-rows: 10px 1fr 10px 1fr;
+    top: 0;
+    align-self: start;
+}
+
+.recommended > h2 {
+    font-size: 20px;
+}
+
+.announcements {
+    grid-row: 2 / 3;
+    background-color: white;
+    padding: 25px;
+    border-radius: 10px;
+}
+
+.trending {
+    grid: 4 / 5;
+    padding: 25px;
+    background-color: white;
+    border-radius: 10px;
+}
